@@ -65,11 +65,11 @@
 		}
 		
 		// 주소로 장소 표시하는 함수
+		// 주소-좌표 변환 객체를 생성합니다
+		var geocoder = new kakao.maps.services.Geocoder();
+		
 		function searchAddress(address)
 		{
-			// 주소-좌표 변환 객체를 생성합니다
-			var geocoder = new kakao.maps.services.Geocoder();
-
 			// 주소로 좌표를 검색합니다
 			geocoder.addressSearch(address, function(result, status) {
 
