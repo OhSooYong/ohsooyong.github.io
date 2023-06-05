@@ -15,6 +15,14 @@
 		};
 
 		var map = new kakao.maps.Map(container, options);
-	</script>
+		
+		function panTo(lat, lng)
+		{
+			var moveLatLon=new kakao.maps.LatLng(lat, lng);
+			map.panTo(moveLatLon);
+		}
+			
+		
+	</script>	
 </body>
 </html>
