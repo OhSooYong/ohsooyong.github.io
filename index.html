@@ -63,10 +63,11 @@
 		    // 지도에 추가된 타입정보를 갱신합니다
 		    currentTypeId = changeMaptype;        
 		}
-	
-	function searchAddress(){        
+		
 	// 주소-좌표 변환 객체를 생성합니다
-	    var geocoder = new kakao.maps.services.Geocoder();
+    	var geocoder = new kakao.maps.services.Geocoder();	
+	function searchAddress(){        
+
 
 	    // 주소로 좌표를 검색합니다
 		 geocoder.addressSearch("서울시", function(result, status) {
