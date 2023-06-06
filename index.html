@@ -39,8 +39,20 @@
 			// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
 			// marker.setMap(null);    		
 		}		
-		
-		// 지도 타입에 따라 표시하는 함수
+		// 기본 지도 타입에 따라 표시하는 함수
+		function setBasdMapType(baseMapType)
+		{
+			var newBaseMapType
+			if(baseMapType == "ROADMAP"){
+				newBaseMapType=kakao.maps.MapTypeId.ROADMAP;
+			}else if(baseMapType == "SKYVIEW"){
+				newBaseMapType=kakao.maps.MapTypeId.SKYVIEW;
+			}else if(baseMapType == "HYBIRD"){
+				newBaseMapType=kakao.maps.MapTypeId.HYBIRD;
+			}
+			map.setMapTypeId(newBaseMapType);
+		}	
+		// 오버레이 지도 타입에 따라 표시하는 함수
 		// 지도에 추가된 지도타입정보를 가지고 있을 변수입니다
 		var currentTypeId;
 
