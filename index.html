@@ -51,10 +51,18 @@
 			}
 			map.setMapTypeId(newBaseMapType);
 		}	
+		// 오버레이 지도 속성을 지우는 함수
+		function removeOverlayMap() {
+			if(currentTypeId !=null){
+				map.removeOverlayMapTypeId(currentTypeId);
+			}
+		}
+		
+		
 		// 오버레이 지도 타입에 따라 표시하는 함수
 		// 지도에 추가된 지도타입정보를 가지고 있을 변수입니다
 		var currentTypeId;
-
+		
 		// 버튼이 클릭되면 호출되는 함수입니다
 		function setOverlayMapTypeId(maptype) {
 		    var changeMaptype;
