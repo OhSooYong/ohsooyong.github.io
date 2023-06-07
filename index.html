@@ -102,14 +102,14 @@
 		}
 		function DrawPolygon(posList)
 		{
-			var polygonPath = [
-			    new kakao.maps.LatLng(33.45133510810506, 126.57159381623066),
-			    new kakao.maps.LatLng(33.44955812811862, 126.5713551811832),
-			    new kakao.maps.LatLng(33.449986291544086, 126.57263296172184),
-			    new kakao.maps.LatLng(33.450682513554554, 126.57321034054742),
-			    new kakao.maps.LatLng(33.451346760004206, 126.57235740081413) 
-			];
+			var polygonPath=[]
+			var numbersArray = posList.split(",").map(Number);
 
+			// 숫자 배열 사용
+			for (var i = 0; i < numbersArray.length; i=+2) {
+			    polygonPath.Push(new kakao.maps.LatLng(numbersArray[i], numbersArray[i+1])
+			}
+					      
 			// 지도에 표시할 다각형을 생성합니다
 			var polygon = new kakao.maps.Polygon({
 			    path:polygonPath, // 그려질 다각형의 좌표 배열입니다
